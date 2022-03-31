@@ -2,7 +2,7 @@ const navSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
   const navLinks = document.querySelectorAll(".nav-links li");
-  //Toggle Nav
+
   burger.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
 
@@ -20,3 +20,12 @@ const navSlide = () => {
 };
 
 navSlide();
+
+const subBtn = () => {
+  const submit = document.getElementById("submit");
+  submit.addEventListener("click", () => {
+    alert("This button has been disabled.");
+  });
+};
+
+subBtn();

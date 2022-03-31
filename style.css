@@ -1,5 +1,7 @@
 :root {
-  --primary-color: rgb(28, 74, 255);
+  --primary-color: #605541;
+  --color-light: #e9d2ab;
+  --color-medium: #8e7c5f;
 }
 
 * {
@@ -8,7 +10,7 @@
   box-sizing: border-box;
 }
 html {
-  background-color: rgb(203, 203, 203);
+  background-color: var(--color-light);
 }
 
 body {
@@ -16,7 +18,8 @@ body {
 }
 
 .main {
-  margin-top: 100px;
+  margin-top: 75px;
+  color: #333;
 }
 
 /* HEADER  */
@@ -52,7 +55,7 @@ nav {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: rgba(226, 226, 226);
+  background-color: var(--primary-color);
   margin: 5px;
   transition: all 0.3s ease;
 }
@@ -82,8 +85,8 @@ nav {
     right: 0px;
     height: 100vh;
     top: 0;
-    padding: 5rem 0 20rem;
-    background: rgb(101, 101, 101);
+    padding: 15rem 0 20rem;
+    background: rgba(101, 101, 101, 0.942);
     background-image: url(./img/Sterling\ Fabrication.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -95,6 +98,11 @@ nav {
     width: 100%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+  }
+
+  .nav-links a {
+    font-size: 20px;
+    text-transform: uppercase;
   }
 
   .burger {
@@ -136,7 +144,10 @@ nav {
 
 .banner h1 {
   font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
+
+/* ABOUT  */
 
 .about-homepage,
 .comments {
@@ -150,14 +161,26 @@ nav {
 }
 
 .about-homepage p {
-  margin-bottom: 2rem;
+  margin: 1rem 0;
 }
+
+.about-homepage ul li {
+  list-style: none;
+  margin: auto;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.384);
+  width: 70%;
+  text-transform: uppercase;
+  padding: 5px;
+}
+/* QUOTE SECTION  */
 
 .quote h2 {
   text-align: center;
   margin: 2rem;
   text-transform: uppercase;
 }
+
+/* FORM */
 form {
   display: flex;
   flex-direction: column;
@@ -167,8 +190,8 @@ form input {
   width: 70%;
   margin: auto;
   border: none;
-  padding: 3px;
-  font-size: 20px;
+  padding: 5px;
+  font-size: 14px;
 }
 
 form input:focus,
@@ -179,7 +202,7 @@ textarea:focus {
 form :placeholder-shown,
 form textarea:placeholder-shown {
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 14px;
 }
 form textarea {
   width: 70%;
@@ -219,6 +242,8 @@ form textarea {
   margin-bottom: 2rem;
 }
 
+/* CONTACT  */
+
 .contact-info {
   background-color: var(--primary-color);
   text-align: center;
@@ -226,8 +251,9 @@ form textarea {
   padding: 2rem 0;
 }
 
+/* FOOTER  */
 .footer {
-  background-color: rgba(0, 0, 194, 0.5);
+  background-color: var(--color-medium);
   padding: 1rem;
   text-align: center;
 }
